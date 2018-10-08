@@ -16,11 +16,12 @@ public class Main {
 
         System.out.println("The top three students are:");
 
-        Collections.sort(studentArray);
-        System.out.println(studentArray.get(4).getName() + " - " + studentArray.get(4).getGPA());
-        System.out.println(studentArray.get(3).getName() + " - " + studentArray.get(3).getGPA());
-        System.out.println(studentArray.get(2).getName() + " - " + studentArray.get(2).getGPA());
+        int length = studentArray.size();
 
+        Collections.sort(studentArray);
+        System.out.println(studentArray.get(length - 1).getName() + " - " + studentArray.get(length - 1).getGPA());
+        System.out.println(studentArray.get(length - 2).getName() + " - " + studentArray.get(length - 2).getGPA());
+        System.out.println(studentArray.get(length - 3).getName() + " - " + studentArray.get(length - 3).getGPA());
     }
 
 }
