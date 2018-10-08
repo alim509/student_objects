@@ -1,15 +1,20 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Student student1 = new Student("Jimmy Hopkins", 2.67);
-        Student student2 = new Student("Harry Potter", 4.59);
-        Student student3 = new Student("Lindsay Weir", 4.96);
-        Student student4 = new Student("Jimmy Brooks", 3.51);
-        Student student5 = new Student("Claire Standish", 4.02);
+        List<Student> studentArray = new ArrayList<Student>();
+        studentArray.add(new Student("Jimmy Hopkins", 2.67));
+        studentArray.add(new Student("Harry Potter", 4.59));
+        studentArray.add(new Student("Lindsay Weir", 4.96));
+        studentArray.add(new Student("Jimmy Brooks", 3.51));
+        studentArray.add(new Student("Claire Standish", 4.02));
 
+        //System.out.println(studentArray.get(1).getName());
 
     }
 }
