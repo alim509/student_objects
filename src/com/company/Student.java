@@ -21,4 +21,17 @@ public class Student {
         return GPA;
     }
 
+    public static Comparator<Student> GPAComparator = new Comparator<Student>() {
+
+        public double compare(Student s1, Student s2) {
+
+            double gpa1 = s1.getGPA();
+            double gpa2 = s2.getGPA();
+
+            /*For ascending order*/
+            //return gpa1-gpa2;
+
+            /*For descending order*/
+            return gpa2-gpa1;
+        }};
 }
