@@ -1,37 +1,33 @@
 package com.company;
 
-/**
- * Created by al5091 on 10/5/18.
- */
-public class Student {
+public class Student implements Comparable<Student>{
 
-    private String name = null;
-    private double GPA = 0;
+    private String studName = null;
+    private double studGPA = 0;
 
-    public Student(String arg1, double arg2) {
-        name = arg1;
-        GPA = arg2;
+    public Student(String name, double gpa) {
+
+        studName = name;
+        studGPA = gpa;
+
     }
 
-    public String getName(){
-        return name;
+    public String getName() {
+
+        return studName;
+
     }
 
-    public double getGPA(){
-        return GPA;
+    public double getGPA() {
+
+        return studGPA;
+
     }
 
-    public static Comparator<Student> GPAComparator = new Comparator<Student>() {
+    public int compareTo(Student student){
 
-        public double compare(Student s1, Student s2) {
+        return Double.valueOf(studGPA).compareTo(student.getGPA());
 
-            double gpa1 = s1.getGPA();
-            double gpa2 = s2.getGPA();
+    }
 
-            /*For ascending order*/
-            //return gpa1-gpa2;
-
-            /*For descending order*/
-            return gpa2-gpa1;
-        }};
 }
